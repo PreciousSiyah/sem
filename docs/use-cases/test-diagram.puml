@@ -1,0 +1,25 @@
+@startuml
+' Actors
+actor Student
+actor Instructor
+
+' System boundary
+rectangle "Student Portal" {
+  (Register) as UC1
+  (Login) as UC2
+  (View Dashboard) as UC3
+  (Submit Assignment) as UC4
+  (View Grades) as UC5
+}
+
+' Connections
+Student --> UC1
+Student --> UC2
+Student --> UC3
+Student --> UC4
+Student --> UC5
+
+Instructor --> UC5
+
+@enduml
+
